@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}ACM at FSU{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row" id="main">
+
+      <!-- Column for news updates -->
+      <div class="col-md-8">
+
+        {% for post in latest %}
+        <div class="post" id="{{post.title}}" data-section-name="{{post.title|lower}}">
+          <h1 class="post-title">{{post.title}}</h1>
+          <p class="post-meta">Posted on {{post.date}} by {{post.author}}</p>
+          <p>{{post}}</p>
+        </div>
+
+        <hr />
+
+        {% endfor %}
+
+      </div>
+
+      <div class="col-md-1">
+        <!-- Empty bar-->
+      </div>
+
+      <!-- "Sidebar" column -->
+      <div class="col-md-3">
+
+        <div class="sidebar">
+
+				<!-- Recent Posts -->
+        {% if latest %}
+	        <h1 class="sidebar-title">Recent Posts</h1>
+	        {% for post in latest %}
+	          <p><a href="#{{post.title}}">{{post.title}}</a></p>
+	        {% endfor %}
+				{% endif %}
+
+				<!-- Tags -->
+				{% if tags %}
+					<h1 class="sidebar-title">Categories</h1>
+					{% for tag in tags %}
+						<p><a href="/tags/{{tag}}">{{tag|capitalize}}</a></p>
+					{% endfor %}
+				{% endif %}
+
+        </div> <!-- /sidebar -->
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+{% endblock %}

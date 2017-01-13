@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700)
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+
+$body-font:		'Open Sans', sans-serif
+$brand-font:	'Montserrat', sans-serif
+
+// Colors
+$acm-blue:		#0182ac
+$fsu-garnet:	#782f40
+$fsu-gold:		#ceb888
+$white:			#ffffff
+$black:			#000000
+$off-white:		#f1f2f4
+$light-grey:	#afafaf
+$mid-grey:		#626262
+$dark-grey:		#191919
+
+$text: 			$dark-grey
+$subtitle:		$light-grey
+
+
+// HTML Element Tags
+
+html
+	height:				100%
+
+body
+	color:				$text
+	background-color:	$white
+	font: 				16px/1 $body-font
+	height:				100%
+	position: 			relative
+
+#main
+	padding-top:		24px
+
+// Custom element stylings
+
+.post
+	line-height:		1.8
+	font-size:			14px
+
+.post-title
+	font-family: 		$brand-font
+	font-size:			24px
+
+.post-meta
+	color: 				$subtitle
+
+.sidebar
+	line-height:		1.5
+	font-size:			16px
+
+	a
+		color:			$subtitle
+		&:hover
+			color:		$text
+
+.sidebar-title
+	font-family:		$brand-font
+	font-size:			20px
+	color:				$dark-grey
+
+
+// Dynamic Page stylings
+
+.page
+	line-height:		1.8
+	font-size:			14px
+
+	h1
+		font-size:		24px
+
+// Bootstrap Styles
+
+.base
+	height:				100%
+
+.navbar
+	.container-fluid
+		padding:		0px
+
+.navbar-container
+	margin-top: 		32px
+
+.navbar-default
+	z-index: 			1024
+	background-color: 	rgba(0,0,0,0)
+	border-radius: 		0
+	border-width: 		0
+
+
+	.navbar-brand
+		font-family: 		$brand-font
+		font-size:			56px
+		color:				$black
+		font-weight: 		700
+
+		&:hover
+			color:			$black
+
+.navbar-nav
+	text-transform:		uppercase
+	letter-spacing: 	1px
+	font-size: 			18px
+
+
+.dropdown-menu>li>a
+	color:				$text !important
+
+@media (min-width: 768px)
+	.nav
+		float: right !important
