@@ -1,7 +1,7 @@
 title: About
 date: 2012-03-04
 
-# About
+<!-- # About -->
 
 Mojang AB is a games studio based in Stockholm, Sweden.
 

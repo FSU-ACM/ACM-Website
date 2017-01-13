@@ -1,17 +1,77 @@
 {% extends "base.html" %}
 
+<!-- Title nonsense -->
+{% block title %}
+	{% if isindex %}
+		ACM at FSU
+	{% else %}
+		{% if page.title %}
+		   {{ page.title }}
+		{% endif %}
+	{% endif %}
+{% endblock %}
 
-{% if page.title %}
-  {% block title %}
-    {{ page.title }}
-  {% endblock %}
-{% endif %}
 
+<!-- Page content -->
 {% block content %}
-<div class="container page">
-  <!-- {% if page.title %}
-    <h2>{{ page.title }}</h2>
-  {% endif %} -->
-  {{ page.html|safe }}
+
+<div class="container">
+	<div class="row" id="main">
+
+		<!-- Column for the real content -->
+		<div class="col-md-8">
+
+			<!-- If this is the index, dislpay the news scroller -->
+			{% if isindex %}
+
+				{% for post in latest %}
+				<div class="post" id="{{post.title}}" data-section-name="{{post.title|lower}}">
+					<h1 class="post-title">{{post.title}}</h1>
+					<p class="post-meta"><a href="/{{post.path}}">Posted on {{post.date}} by {{post.author}}</a></p>
+					<p>{{post}}</p>
+				</div>
+
+				<hr />
+
+				{% endfor %}
+
+			{% else %} <!-- else not index, use basic rendering -->
+				<div class="page">
+					<h1 class="post-title">{{page.title}}</h1>
+				  {{ page.html|safe }}
+				</div>
+
+			{% endif %}
+
+		</div> <!-- Content column -->
+
+		<div class="col-md-1">
+			<!-- Empty bar-->
+		</div>
+
+		<!-- "Sidebar" column -->
+		<div class="col-md-3">
+			<div class="sidebar">
+
+			<!-- Recent Posts -->
+			{% if latest %}
+				<h1 class="sidebar-title">Recent Posts</h1>
+				{% for post in latest %}
+					<p><a href="/{{post.path}}">{{post.title}}</a></p>
+				{% endfor %}
+			{% endif %}
+
+			<!-- Tags -->
+			{% if tags %}
+				<h1 class="sidebar-title">Categories</h1>
+				{% for tag in tags %}
+					<p><a href="/tags/{{tag}}">{{tag|capitalize}}</a></p>
+				{% endfor %}
+			{% endif %}
+
+			</div> <!-- /sidebar div -->
+		</div> <!-- /sidebar column -->
+	</div>
 </div>
+
 {% endblock content %}

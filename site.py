@@ -21,7 +21,8 @@ app.url_map.strict_slashes = False
 # Nav
 topbar = Navbar('ACM at FSU',
     Link('Home', '/'),
-    Link('About', 'about'),
+    Link('About', '/about'),
+    Link('Sponsors', '#'),
     Link('Contest', '#'),
     Subgroup('Misc.',
         Link('Slack', '#'),
@@ -34,10 +35,11 @@ nav = Nav()
 nav.register_element('top', topbar)
 nav.init_app(app)
 
-
-# Routes
-@app.route('/')
-def index():
+# Helper functions
+def get_sidebar():
+    """
+    This function returns all the nessessary data for using the sidebar.
+    """
 
     # get all news
     news = [p for p in pages if 'tags' in p.meta and 'news' in p['tags']]
@@ -49,15 +51,26 @@ def index():
         if 'tags' in p.meta:
             tags.union(set(p['tags']))
 
-    return render_template('index.html',
+    return latest, list(tags)
+
+
+# Routes
+@app.route('/')
+def index():
+    latest, tags = get_sidebar()
+    return render_template('page.html',
+        isindex = True,
         latest=latest,
-        tags=list(tags))
+        tags=tags)
 
 @app.route('/<path:path>/')
 def page(path):
-    #return pages.get_or_404(path).html
+    latest, tags = get_sidebar()
     return render_template('page.html',
-        page = pages.get_or_404(path))
+        isindex = False,
+        page = pages.get_or_404(path),
+        latest=latest,
+        tags=tags)
 
 # Custom Jinja filters
 def nowhitespace(value):    # currently not in use
