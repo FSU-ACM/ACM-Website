@@ -24,10 +24,10 @@ topbar = Navbar('ACM at FSU',
     Link('About', '/about'),
     Link('Sponsors', '#'),
     Link('Contest', '#'),
-    Subgroup('Misc.',
+    Subgroup('Links',
         Link('Slack', '#'),
         Link('Facebook', '#'),
-        Link('FAQ', '#'),
+        Link('Nole Central', '#'),
     )
 )
 

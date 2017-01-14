@@ -43,6 +43,8 @@ a {
   font-size: 14px; }
   .page h1 {
     font-size: 24px; }
+  .page h2 {
+    font-size: 20px; }
 
 .base {
   height: 100%; }
@@ -64,7 +66,7 @@ a {
     color: #000000;
     font-weight: 700; }
     .navbar-default .navbar-brand:hover {
-      color: #0182ac; }
+      color: #000000; }
 
 .navbar-nav {
   text-transform: uppercase;
