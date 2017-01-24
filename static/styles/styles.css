@@ -7,7 +7,8 @@ body {
   color: #191919;
   background-color: #ffffff;
   font: 16px/1 "Open Sans", sans-serif;
-  position: relative; }
+  position: relative;
+  line-height: 1.8; }
 
 a {
   color: #afafaf; }
@@ -19,7 +20,6 @@ a {
   padding-top: 24px; }
 
 .post {
-  line-height: 1.8;
   font-size: 14px; }
 
 .post-title {
@@ -38,9 +38,21 @@ a {
   font-size: 20px;
   color: #191919; }
 
-.page {
-  line-height: 1.8;
+.officers {
+  padding-top: 16px; }
+
+.officer {
+  padding-top: 16px; }
+
+.officer-name {
+  font-size: 16px; }
+
+.officer-role {
   font-size: 14px; }
+
+.page {
+  font-size: 14px;
+  padding-bottom: 32px; }
   .page h1 {
     font-size: 24px; }
   .page h2 {
