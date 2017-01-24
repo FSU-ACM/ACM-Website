@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "page.html" %}
+
+{% block content_inner %}
+
+	<div class="page">
+		<h1 class="post-title">{{page.title}}</h1>
+		{{ page.html|safe }}
+	</div>
+
+{% endblock %}

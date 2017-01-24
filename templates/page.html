@@ -1,13 +1,12 @@
+<!DOCTYPE html>
 {% extends "base.html" %}
 
 <!-- Title nonsense -->
 {% block title %}
-	{% if isindex %}
-		ACM at FSU
+	{% if page and page.title %}
+		{{ page.title }}
 	{% else %}
-		{% if page.title %}
-		   {{ page.title }}
-		{% endif %}
+		ACM at FSU
 	{% endif %}
 {% endblock %}
 
@@ -21,27 +20,17 @@
 		<!-- Column for the real content -->
 		<div class="col-md-8">
 
-			<!-- If this is the index, dislpay the news scroller -->
-			{% if isindex %}
-
-				{% for post in latest %}
-				<div class="post" id="{{post.title}}" data-section-name="{{post.title|lower}}">
-					<h1 class="post-title">{{post.title}}</h1>
-					<p class="post-meta"><a href="/{{post.path}}">Posted on {{post.date}} by {{post.author}}</a></p>
-					<p>{{post}}</p>
-				</div>
-
-				<hr />
-
-				{% endfor %}
-
-			{% else %} <!-- else not index, use basic rendering -->
+			<!-- Content control -->
+			{% if dynamic_page %}
 				<div class="page">
 					<h1 class="post-title">{{page.title}}</h1>
-				  {{ page.html|safe }}
+					{{ page.html|safe }}
 				</div>
-
+			{% else %}
+				{% block content_inner %}
+				{% endblock %}
 			{% endif %}
+
 
 		</div> <!-- Content column -->
 
