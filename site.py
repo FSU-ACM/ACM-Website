@@ -22,12 +22,12 @@ app.url_map.strict_slashes = False
 topbar = Navbar('ACM at FSU',
     Link('Home', '/'),
     Link('About', '/about'),
-    Link('Sponsors', '#'),
-    Link('Contest', '#'),
+    Link('Sponsors', '/sponsors'),
+    Link('Contest', 'http://springprogrammingcontest.com'),
     Subgroup('Links',
-        Link('Slack', '#'),
-        Link('Facebook', '#'),
-        Link('Nole Central', '#'),
+        Link('Slack', 'https://acmatfsu.slack.com'),
+        Link('Facebook', 'https://www.facebook.com/groups/cs.fsu.acm/'),
+        Link('Nole Central', 'https://nolecentral.dsa.fsu.edu/organization/associationforcomputingmachinery'),
     )
 )
 
@@ -53,24 +53,55 @@ def get_sidebar():
 
     return latest, list(tags)
 
+def get_officers():
+    """
+    This function returns a tuple of officers: ACM,ACM-W
+    """
+
+    # get all officers
+    acm = [p for p in pages if 'org' in p.meta and p['org'] == 'ACM']
+    acmw = [p for p in pages if 'org' in p.meta and p['org'] == 'ACM-W']
+
+
+    return sorted(acm, key=lambda k: k.meta['order']), acmw #sorted(acmw, key=lambda k: k.meta['order'])
+
+def get_sponsors():
+    return None
 
 # Routes
 @app.route('/')
 def index():
     latest, tags = get_sidebar()
-    return render_template('page.html',
-        isindex = True,
+    return render_template('index.html',
         latest=latest,
         tags=tags)
+
+@app.route('/about')
+def about():
+    latest, tags = get_sidebar()
+    acm, acmw = get_officers()
+    return render_template('about.html',
+        page=pages.get_or_404('about'),
+        latest=latest,
+        acm=acm,
+        acmw=acmw)
+
+@app.route('/sponsors')
+def sponsors():
+    latest, tags = get_sidebar()
+    sponsors = get_sponsors()
+    return render_template('sponsors.html',
+        page=pages.get_or_404('sponsors'),
+        latest=latest,
+        sponsors=sponsors)
 
 @app.route('/<path:path>/')
 def page(path):
     latest, tags = get_sidebar()
     return render_template('page.html',
-        isindex = False,
-        page = pages.get_or_404(path),
-        latest=latest,
-        tags=tags)
+		dynamic_page=True,
+        page=pages.get_or_404(path),
+        latest=latest)
 
 # Custom Jinja filters
 def nowhitespace(value):    # currently not in use
