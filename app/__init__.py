@@ -20,15 +20,16 @@ app.url_map.strict_slashes = False
 
 # Nav
 topbar = Navbar('ACM at FSU',
-    Link('Home', '/'),
-    Link('About', '/about'),
-    Link('Sponsors', '/sponsors'),
-    Link('Contest', 'http://springprogrammingcontest.com'),
-    Subgroup('Links',
-        Link('Slack', 'https://acmatfsu.slack.com'),
-        Link('Facebook', 'https://www.facebook.com/groups/cs.fsu.acm/'),
-        Link('Nole Central', 'https://nolecentral.dsa.fsu.edu/organization/associationforcomputingmachinery'),
-    )
+	Link('Home', '/'),
+	Link('About', '/about'),
+	Link('Sponsors', '/sponsors'),
+	Link('Contest', 'http://springprogrammingcontest.com'),
+	Subgroup('Links',
+		Link('Slack', 'https://acmatfsu.slack.com'),
+		Link('Facebook', 'https://www.facebook.com/groups/cs.fsu.acm/'),
+		Link('Nole Central', 'https://nolecentral.dsa.fsu.edu/organization/associationforcomputingmachinery'),
+		Link('Resume Drop', 'https://script.google.com/macros/s/AKfycbyWsq2FbgY3eWc0qrTEY4a2vZGJ8mrGHP_fbJCUebmV3uEQPg/exec'),
+	)
 )
 
 nav = Nav()
