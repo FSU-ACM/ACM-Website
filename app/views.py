@@ -75,6 +75,11 @@ def page(path):
         page=pages.get_or_404(path),
         latest=latest)
 
+@app.route('/resumedrop')
+def resumedrop():
+	url = "https://script.google.com/macros/s/AKfycbyWsq2FbgY3eWc0qrTEY4a2vZGJ8mrGHP_fbJCUebmV3uEQPg/exec"
+	return redirect(url, code=302)
+
 # Custom Jinja filters
 def nowhitespace(value):    # currently not in use
     return str(value).replace(' ', '')

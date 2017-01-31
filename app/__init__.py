@@ -28,7 +28,7 @@ topbar = Navbar('ACM at FSU',
 		Link('Slack', 'https://acmatfsu.slack.com'),
 		Link('Facebook', 'https://www.facebook.com/groups/cs.fsu.acm/'),
 		Link('Nole Central', 'https://nolecentral.dsa.fsu.edu/organization/associationforcomputingmachinery'),
-		Link('Resume Drop', 'https://script.google.com/macros/s/AKfycbyWsq2FbgY3eWc0qrTEY4a2vZGJ8mrGHP_fbJCUebmV3uEQPg/exec'),
+		Link('Resume Drop', '/resumedrop'),
 	)
 )
 
