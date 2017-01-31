@@ -2,3 +2,4 @@
 */static/styles/.sass-cache/*
 *.pyc
 site-flask/
+app/pages/news/
