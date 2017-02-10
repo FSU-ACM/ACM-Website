@@ -35,7 +35,7 @@ def get_officers():
     acmw = [p for p in pages if 'org' in p.meta and p['org'] == 'ACM-W']
 
 
-    return sorted(acm, key=lambda k: k.meta['order']), acmw #sorted(acmw, key=lambda k: k.meta['order'])
+    return sorted(acm, key=lambda k: k.meta['order']), sorted(acmw, key=lambda k: k.meta['order'])
 
 def get_sponsors():
     return None
