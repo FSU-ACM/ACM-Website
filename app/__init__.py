@@ -4,6 +4,8 @@ from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import *
 
+import os
+
 # Init
 app = Flask(__name__)
 pages = FlatPages(app)
