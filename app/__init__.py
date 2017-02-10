@@ -1,5 +1,5 @@
-from flask import Flask
-from flask_flatpages import FlatPages
+from flask import Flask, render_template_string
+from flask_flatpages import FlatPages, pygmented_markdown
 from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import *
@@ -35,5 +35,12 @@ topbar = Navbar('ACM at FSU',
 nav = Nav()
 nav.register_element('top', topbar)
 nav.init_app(app)
+
+# Fix renderer for jinja and md
+def prerender_jinja(text):
+    prerendered_body = render_template_string(Markup(text))
+    return pygmented_markdown(prerendered_body)
+
+app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 from views import *
