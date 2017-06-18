@@ -1,4 +1,2 @@
-*/static/styles/.sass-cache
-*/static/styles/.sass-cache/*
-*.pyc
-site-flask/
+# OS Specific files
+.DS_Store
