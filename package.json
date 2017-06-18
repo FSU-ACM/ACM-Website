@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/FSU-ACM/acmatfsu.org/issues"
   },
-  "homepage": "https://github.com/FSU-ACM/acmatfsu.org#readme"
+  "homepage": "https://github.com/FSU-ACM/acmatfsu.org#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-data": "^1.2.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  }
 }
