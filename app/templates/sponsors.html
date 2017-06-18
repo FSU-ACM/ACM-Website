@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "page.html" %}
+
+{% block content_inner %}
+
+	<div class="page">
+		<h1 class="post-title">{{page.title}}</h1>
+		{{ page.html|safe }}
+
+		<br />
+		<h2 class="post-title">Our current sponsors</h2>
+		<div class="sponsor-wrapper">
+
+			<div class="sponsor-row">
+
+				<div class="sponsor-wrap">
+					<div class="sponsor-inner-wrap">
+						<img id="harris" src="{{url_for('static', filename="assets/harris.png")}}" />
+					</div>
+				</div>
+
+				<div class="sponsor-wrap">
+					<div class="sponsor-inner-wrap">
+						<img id="dci" src="{{url_for('static', filename="assets/dci.png")}}" />
+					</div>
+				</div>
+
+			</div>
+
+			<div class="sponsor-row">
+
+				<div class="sponsor-wrap">
+					<div class="sponsor-inner-wrap">
+						<img src="{{url_for('static', filename="assets/state-farm.png")}}" />
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+{% endblock %}

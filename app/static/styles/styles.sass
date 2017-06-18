@@ -19,6 +19,9 @@ $dark-grey:		#191919
 $text: 			$dark-grey
 $subtitle:		$light-grey
 
+$title-size-main:	56px
+$title-size-small:	20px
+
 
 // HTML Element Tags
 
@@ -76,6 +79,32 @@ a
 .officer-role
 	font-size:			14px
 
+// Sponsors
+
+.sponsor-wrapper
+	min-height: 500px
+
+.sponsor-row
+	display: flex
+	justify-content: center
+
+.sponsor-wrap
+	display: flex
+	justify-content: center
+	max-width: 350px
+	max-height: 200px
+
+.sponsor-inner-wrap
+	align-self: center
+	padding: 0 2rem
+
+	img
+		width: 100%
+
+	#harris
+		padding-top: 11%
+
+
 
 // Dynamic Page stylings
 
@@ -110,12 +139,17 @@ a
 
 	.navbar-brand
 		font-family: 		$brand-font
-		font-size:			56px
 		color:				$black
 		font-weight: 		700
+		font-size:			20px
 
 		&:hover
 			color:			$black
+
+
+		@media screen and (min-width: 1100px)
+			font-size:		56px
+
 
 .navbar-nav
 	text-transform:		uppercase

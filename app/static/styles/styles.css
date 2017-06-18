@@ -50,6 +50,27 @@ a {
 .officer-role {
   font-size: 14px; }
 
+.sponsor-wrapper {
+  min-height: 500px; }
+
+.sponsor-row {
+  display: flex;
+  justify-content: center; }
+
+.sponsor-wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 350px;
+  max-height: 200px; }
+
+.sponsor-inner-wrap {
+  align-self: center;
+  padding: 0 2rem; }
+  .sponsor-inner-wrap img {
+    width: 100%; }
+  .sponsor-inner-wrap #harris {
+    padding-top: 11%; }
+
 .page {
   font-size: 14px;
   padding-bottom: 32px; }
@@ -74,11 +95,14 @@ a {
   border-width: 0; }
   .navbar-default .navbar-brand {
     font-family: "Montserrat", sans-serif;
-    font-size: 56px;
     color: #000000;
-    font-weight: 700; }
+    font-weight: 700;
+    font-size: 20px; }
     .navbar-default .navbar-brand:hover {
       color: #000000; }
+    @media screen and (min-width: 1100px) {
+      .navbar-default .navbar-brand {
+        font-size: 56px; } }
 
 .navbar-nav {
   text-transform: uppercase;

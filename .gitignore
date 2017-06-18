@@ -1,2 +1,4 @@
-static/styles/.sass-cache
-static/styles/.sass-cache/*
+*/static/styles/.sass-cache
+*/static/styles/.sass-cache/*
+*.pyc
+site-flask/
