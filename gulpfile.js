@@ -16,8 +16,10 @@ gulp.task('pug', function() {
 
 gulp.task('sass', function() {
     const sass = require('gulp-sass');
-    gulp.src('src/**/*.sass')
-        .pipe(sass().on('error', sass.logError))
+    const paths = ['src/public/'];
+    gulp.src('src/views/**/*.sass')
+        .pipe(sass({includePaths: paths})
+            .on('error', sass.logError))
         .pipe(flatten())
         .pipe(gulp.dest(build + '/css/'));
 });
