@@ -7,7 +7,7 @@ gulp.task('pug', function() {
     const pug    = require('gulp-pug');
     const locals = require('./src/locals.js');
 
-    gulp.src('src/**/*.pug')
+    gulp.src(['src/views/*/*.pug', '!src/views/_includes/**'])
         .pipe(pug({locals: locals}))
         .on('error', console.log)
         .pipe(flatten())
