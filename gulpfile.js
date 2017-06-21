@@ -21,7 +21,13 @@ gulp.task('sass', function() {
         .pipe(sass({includePaths: paths})
             .on('error', sass.logError))
         .pipe(flatten())
-        .pipe(gulp.dest(build + '/css/'));
+        .pipe(gulp.dest(build + '/css'));
+});
+
+gulp.task('assets', function() {
+    gulp.src('src/public/img/**')
+        .pipe(flatten())
+        .pipe(gulp.dest(build + '/assets/img'))
 });
 
 gulp.task('clean', function() {
@@ -31,10 +37,12 @@ gulp.task('clean', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/**/*.pug', ['pug']);
-    gulp.watch('src/**/*.sass', ['sass']);
+    gulp.watch('src/views/**/*.pug', ['pug']);
+    gulp.watch('src/views/**/*.sass', ['sass']);
+    gulp.watch('src/public/**', ['assets']);
+    gulp.watch('src/locals.js', ['pug'])
 });
 
 gulp.task('views', ['pug', 'sass']);
-gulp.task('build', ['views']);
+gulp.task('build', ['views', 'assets']);
 gulp.task('default', ['build']);
