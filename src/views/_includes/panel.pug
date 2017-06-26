@@ -1,0 +1,23 @@
+.container    
+    img.logo(src=`${locals.img}/acm-logo.svg`)
+    //- img.logo.is-hidden-desktop(src=`${locals.img}/acm-logo-blue.svg`)
+    .name        
+        .acm Association for Computing Machinery
+        .fsu Florida State University
+    hr
+    ul.links
+        li: a(href="index.html") events
+        li: a(href="sponsors.html") sponsors
+        li: a(href="officers.html") officers
+        li: a(href="about.html") about
+        //- li: a(href="http") contest
+        
+    .media
+        .columns.is-gapless.is-mobile
+            .column: a#facebook(href="http://facebook.com/groups/cs.fsu.acm" class="social-icon") 
+                i(class="fa fa-facebook")
+            .column: a#slack(href="http://acmatfsu.slack.com" class="social-icon")
+                i(class="fa fa-slack")
+            .column: a#github(href="http://github.com/fsu-acm" class="social-icon")
+                i(class="fa fa-github")
+                
