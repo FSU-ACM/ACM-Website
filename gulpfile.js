@@ -36,7 +36,7 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['build'], function() {
     gulp.watch('src/views/**/*.pug', ['pug']);
     gulp.watch('src/views/**/*.sass', ['sass']);
     gulp.watch('src/public/**', ['assets']);
