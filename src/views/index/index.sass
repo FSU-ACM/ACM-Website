@@ -1,0 +1,52 @@
+@import "bulma/sass/utilities/_all"
+@import "bulma/sass/base/_all"
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700')
+
+h1
+    font-size: $size-3
+    font-weight: 700
+    color: $black
+
+.event
+
+    margin-bottom: 64px
+
+    .headline
+
+        span
+            font-size: $size-3
+            // font-family: 'Inconsolata', $family-primary
+            color: $black
+
+        p
+            margin: 8px 0
+            font-size: $size-5
+
+        br
+            +desktop
+                display: none
+
+        .title
+            margin-right: 12px
+            font-weight: 700
+
+        .subtitle
+            color: $grey-darker
+
+        .subtitle::before
+            content: "("
+
+        .subtitle::after
+            content: ")"
+
+    .meta
+        font-family: 'Inconsolata', $family-primary
+        font-weight: 700
+        color: $grey
+
+        span
+            margin-right: 8px
+
+            i
+                margin-right: 8px

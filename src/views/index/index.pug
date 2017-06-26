@@ -1,0 +1,30 @@
+extends ../template.pug
+
+block append styles
+      link(rel="stylesheet", href=`${locals.css}/index.css`)
+
+block content
+
+    each event in locals.events
+        .event
+            .headline
+                span.title= event.title
+                br
+                if event.subtitle != ""
+                    span.subtitle= event.subtitle
+                p= event.description
+            .meta
+                span.date 
+                    i(class="fa fa-calendar")
+                    span= event.date
+                span.time 
+                    i(class="fa fa-clock-o")
+                    span= event.time
+                span.place 
+                    i(class="fa fa-map-marker")
+                    span= event.place
+                span.link
+                    i(class="fa fa-facebook")
+                    a RSVP
+
+            
