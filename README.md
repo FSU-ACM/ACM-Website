@@ -6,7 +6,7 @@ Association for Computing Machinery at Florida State University chapter homepage
 
 #### `locals.js`
 
-Constant data passed as variables to `.pug` templates.
+Constant data passed as variables to `.pug` templates. May not update on watch.
 
 ### Folder structure
 
