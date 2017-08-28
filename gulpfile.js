@@ -27,7 +27,7 @@ gulp.task('sass', function() {
 gulp.task('assets', function() {
     gulp.src('src/public/img/**')
         .pipe(flatten())
-        .pipe(gulp.dest(build + '/assets/img'))
+        .pipe(gulp.dest(build + '/assets/img'));
 });
 
 gulp.task('clean', function() {
@@ -36,8 +36,16 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
+gulp.task('favicon', function() {
+    gulp.src('src/public/favicon.png')
+        .pipe(gulp.dest(build));
+})
+
 gulp.task('watch', ['build'], function() {
     gulp.watch('src/views/**/*.pug', ['pug']);
+    gulp.watch('src/**/events.json', ['pug']);
+    gulp.watch('src/**/sponsors.json', ['pug']);
+    gulp.watch('src/**/partners.json', ['pug']);
     gulp.watch('src/views/**/*.sass', ['sass']);
     gulp.watch('src/public/*.sass', ['sass']);
     gulp.watch(['src/public/**', '!src/public/*.sass'], ['assets']);
@@ -45,5 +53,5 @@ gulp.task('watch', ['build'], function() {
 });
 
 gulp.task('views', ['pug', 'sass']);
-gulp.task('build', ['views', 'assets']);
+gulp.task('build', ['views', 'assets', 'favicon']);
 gulp.task('default', ['build']);

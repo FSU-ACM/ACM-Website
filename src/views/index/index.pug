@@ -23,8 +23,9 @@ block content
                 span.place 
                     i(class="fa fa-map-marker")
                     span= event.place
-                span.link
-                    i(class="fa fa-facebook")
-                    a RSVP
+                if event.rsvp
+                    span.link
+                        i(class="fa fa-facebook")
+                        a RSVP
 
             

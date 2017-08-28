@@ -1,0 +1,32 @@
+{
+    "events": [
+        {
+            "title" : "General Body Meeting",
+            "subtitle" : "",
+            "description" : "First chapter meeting of the semester. Come out and meet new folks!",
+            "date" : "September 5th, 2017",
+            "time" : "5:30pm",
+            "place" : "Love 353",
+            "rsvp" : ""
+        },
+        {
+            "title" : "How to Succeed in C.S.",
+            "subtitle" : "Workshop",
+            "description" : "Learn about the keys to success as a Computer Science student in both your academic and professional career.",
+            "date" : "September 5th, 2017",
+            "time" : "6:00pm",
+            "place" : "Love 353",
+            "rsvp" : ""
+
+        },
+        {
+            "title" : "Career in Industry",
+            "subtitle" : "Workshop",
+            "description" : "TODO",
+            "date" : "September 7th, 2017",
+            "time" : "5:30pm",
+            "place" : "Love 151",
+            "rsvp" : ""
+        }
+    ]
+}
