@@ -5,7 +5,7 @@ block append styles
 
 block content
 
-    each event in locals.events
+    each event in locals.events.reverse()
         .event
             .headline
                 span.title= event.title
@@ -26,6 +26,6 @@ block content
                 if event.rsvp
                     span.link
                         i(class="fa fa-facebook")
-                        a RSVP
+                        a(href= event.rsvp) RSVP
 
             

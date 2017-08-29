@@ -7,7 +7,7 @@
             "date" : "September 5th, 2017",
             "time" : "5:30pm",
             "place" : "Love 353",
-            "rsvp" : ""
+            "rsvp" : "https://www.facebook.com/events/732136413642827"
         },
         {
             "title" : "How to Succeed in C.S.",
@@ -16,7 +16,7 @@
             "date" : "September 5th, 2017",
             "time" : "6:00pm",
             "place" : "Love 353",
-            "rsvp" : ""
+            "rsvp" : "https://www.facebook.com/events/732136413642827"
 
         },
         {
@@ -26,6 +26,15 @@
             "date" : "September 7th, 2017",
             "time" : "5:30pm",
             "place" : "Love 151",
+            "rsvp" : ""
+        },
+        {
+            "title" : "Software Developer Roundtable",
+            "subtitle" : "",
+            "description" : "A two-way discussion between students and businesses in Tallahassee. Topics will include local job opprotunities for software developers as well as the different types of skills students from various technical programs possess.",
+            "date" : "September 13th, 2017",
+            "time" : "5:30pm",
+            "place" : "Domi Station",
             "rsvp" : ""
         }
     ]
