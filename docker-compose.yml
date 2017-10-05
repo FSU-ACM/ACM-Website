@@ -1,0 +1,8 @@
+version: '2'
+services:
+  acm-website:
+    build: .
+    image: acm-website
+    restart: always
+    ports:
+      - "8081:80"
