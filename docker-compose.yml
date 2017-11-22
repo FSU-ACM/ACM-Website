@@ -14,7 +14,7 @@ services:
     image: acm-website
     restart: always
     environment:
-      - VIRTUAL_HOST=acmatfsu.org,acm.localhost
+      - VIRTUAL_HOST=acmatfsu.org
     expose:
       - "80"
   api-proxy:
@@ -23,7 +23,7 @@ services:
     working_dir: /home/node/app
     environment:
       - NODE_ENV=production
-      - VIRTUAL_HOST=proxy.acmatfsu.org,proxy.localhost
+      - VIRTUAL_HOST=proxy.acmatfsu.org
     volumes:
       - ./:/home/node/app
     expose:
