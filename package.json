@@ -18,7 +18,11 @@
     "url": "https://github.com/FSU-ACM/acmatfsu.org/issues"
   },
   "homepage": "https://github.com/FSU-ACM/acmatfsu.org#readme",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "micro": "^9.0.2",
+    "request": "^2.83.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
