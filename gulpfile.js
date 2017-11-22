@@ -24,24 +24,29 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(build + '/public/css'))
 })
 
-gulp.task('babel', function() {
-    const browserify  = require('browserify')
-    const babelify    = require('babelify')
-    const source      = require('vinyl-source-stream')
-    const buffer      = require('vinyl-buffer')
-    const uglify      = require('gulp-uglify')
-    const sourcemaps  = require('gulp-sourcemaps')
-
-    return browserify({entries: 'src/js/events.js', debug: true})
-        .transform('babelify', { presets: ['env'] })
-        .bundle()
-        .pipe(source('events.js'))
-        .pipe(buffer())
-        .pipe(sourcemaps.init())
-        // .pipe(uglify())
-        .pipe(sourcemaps.write('./maps'))
+gulp.task('js', function () {
+    gulp.src('src/js/*.js')
         .pipe(gulp.dest(build + '/public/js'))
 })
+
+// gulp.task('babel', function() {
+//     const browserify  = require('browserify')
+//     const babelify    = require('babelify')
+//     const source      = require('vinyl-source-stream')
+//     const buffer      = require('vinyl-buffer')
+//     const uglify      = require('gulp-uglify')
+//     const sourcemaps  = require('gulp-sourcemaps')
+
+//     return browserify({entries: 'src/js/events.js', debug: true})
+//         .transform('babelify', { presets: ['env'] })
+//         .bundle()
+//         .pipe(source('events.js'))
+//         .pipe(buffer())
+//         .pipe(sourcemaps.init())
+//         // .pipe(uglify())
+//         .pipe(sourcemaps.write('./maps'))
+//         .pipe(gulp.dest(build + '/public/js'))
+// })
 
 gulp.task('favicon', function() {
     gulp.src('assets/favicon.png')
@@ -72,5 +77,5 @@ gulp.task('watch', ['build'], function() {
 })
 
 gulp.task('views', ['pug', 'sass'])
-gulp.task('build', ['views', 'assets', 'babel'])
+gulp.task('build', ['views', 'assets', 'js'])
 gulp.task('default', ['build'])
