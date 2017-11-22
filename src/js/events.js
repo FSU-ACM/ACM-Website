@@ -19,6 +19,5 @@
 // })
 
 $.get('https://proxy.acmatfsu.org', function(data) {
-    console.log(data)
-    $('#events').html(data)
-})
+    $('#events').html(data);
+});
