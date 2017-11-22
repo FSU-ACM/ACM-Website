@@ -1,0 +1,24 @@
+each event in locals.events
+    .event
+        .headline
+            span.title= event.name
+            br
+            //- if event.subtitle != ""
+            //-     span.subtitle= event.subtitle
+            p= event.description
+        .meta
+            //- span.date
+            //-     i(class="fa fa-calendar")
+            //-     span= event.date
+            span.time
+                i(class="fa fa-clock-o")
+                span= event.start_time
+            if event.place && event.place.name
+                span.place
+                    i(class="fa fa-map-marker")
+                    span= event.place.name
+            span.link
+                i(class="fa fa-facebook")
+                a(href=`https://www.facebook.com/events/${event.id}`) RSVP
+
+

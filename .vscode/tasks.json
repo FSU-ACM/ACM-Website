@@ -9,7 +9,23 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "label": "build"
+        },
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": "serve ./build",
+            "isBackground": true,
+            "problemMatcher": {
+				"owner": "custom",
+				"pattern": { "regexp": "__________" },
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^Serving!$",
+					"endsPattern": "^Serving!$"
+				}
+			}
         }
     ]
 }

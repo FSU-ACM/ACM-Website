@@ -1,31 +1,11 @@
 extends ../template.pug
 
 block append styles
-      link(rel="stylesheet", href=`${locals.css}/index.css`)
+    link(rel="stylesheet", href=`${locals.css}/index.css`)
+
+block append scripts
+    script(src=`${locals.js}/events.js`)
 
 block content
-
-    each event in locals.events.reverse()
-        .event
-            .headline
-                span.title= event.title
-                br
-                if event.subtitle != ""
-                    span.subtitle= event.subtitle
-                p= event.description
-            .meta
-                span.date 
-                    i(class="fa fa-calendar")
-                    span= event.date
-                span.time 
-                    i(class="fa fa-clock-o")
-                    span= event.time
-                span.place 
-                    i(class="fa fa-map-marker")
-                    span= event.place
-                if event.rsvp
-                    span.link
-                        i(class="fa fa-facebook")
-                        a(href= event.rsvp) RSVP
-
-            
+    //- include events
+    #events.events

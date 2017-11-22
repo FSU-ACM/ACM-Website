@@ -25,14 +25,26 @@ gulp.task('sass', function() {
 })
 
 gulp.task('babel', function() {
-    const babel = require('gulp-babel')
-    return gulp.src('src/js/*.js')
-        .pipe(babel())
+    const browserify  = require('browserify')
+    const babelify    = require('babelify')
+    const source      = require('vinyl-source-stream')
+    const buffer      = require('vinyl-buffer')
+    const uglify      = require('gulp-uglify')
+    const sourcemaps  = require('gulp-sourcemaps')
+
+    return browserify({entries: 'src/js/events.js', debug: true})
+        .transform('babelify', { presets: ['env'] })
+        .bundle()
+        .pipe(source('events.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init())
+        // .pipe(uglify())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(build + '/public/js'))
 })
 
 gulp.task('favicon', function() {
-    gulp.src('public/favicon.png')
+    gulp.src('assets/favicon.png')
         .pipe(gulp.dest(build))
 })
 
