@@ -18,7 +18,7 @@
 //     console.log(err)
 // })
 
-$.get('http://proxy.acmatfsu.org', function(data) {
+$.get('https://proxy.acmatfsu.org', function(data) {
     console.log(data)
     $('#events').html(data)
 })
