@@ -1,5 +1,7 @@
 # OS Specific files
 .DS_Store
 
-node_modules/
-html/
+/node_modules
+/html
+/build
+/.env

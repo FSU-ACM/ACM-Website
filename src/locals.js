@@ -1,8 +1,9 @@
 // locals.js
 var locals = {};
 
-locals.css = "./css";
-locals.img = "./assets/img";
+locals.css = "./public/css";
+locals.img = "./public/img";
+locals.js  = "./public/js";
 
 locals.events = require("./events.json").events;
 locals.officers = require("./views/officers/officers.json").officers;

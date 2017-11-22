@@ -4,7 +4,9 @@
   "description": "acmatfsu.org",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "dev": "gulp watch",
+    "start": "gulp deploy"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,11 @@
   "homepage": "https://github.com/FSU-ACM/acmatfsu.org#readme",
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "bulma": "^0.4.4",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-data": "^1.2.1",
     "gulp-flatten": "^0.3.1",

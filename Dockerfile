@@ -27,3 +27,4 @@ RUN npm install
 
 # Build the site
 RUN gulp build
+RUN rm -rf html && ln -s /usr/share/nginx/build /usr/share/nginx/html
