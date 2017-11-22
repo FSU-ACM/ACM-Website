@@ -28,4 +28,4 @@ services:
       - ./:/home/node/app
     expose:
       - "3000"
-    command: "yarn && npx micro api-proxy.js"
+    command: bash -c "yarn && npx micro api-proxy.js"
