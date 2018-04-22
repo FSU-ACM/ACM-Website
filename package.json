@@ -3,8 +3,8 @@
   "version": "3.0.0",
   "description": "FSU ACM Chapter Site",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev src",
+    "build": "vuepress build -d dist src"
   },
   "repository": "https://github.com/FSU-ACM/acmatfsu.org.git",
   "author": "Andrew Sosa <andrewsosa001@gmail.com>",
