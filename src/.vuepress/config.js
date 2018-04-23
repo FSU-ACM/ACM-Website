@@ -1,6 +1,6 @@
 module.exports = {
     title: 'ACM at FSU',
-    description: 'GBMs every x day',
+    description: 'See our event calendar on Facebook:',
     head: [
         ['link', { rel: 'icon', href: `/favicon.png` }]
     ],
