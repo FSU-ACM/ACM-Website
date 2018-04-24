@@ -5,6 +5,9 @@ deploy:
   provider: script
   script: gulp deploy
   skip-cleanup: true
-  local-dir: /dist/
+  local-dir: "/dist/"
   on:
     branch: master
+notifications:
+  slack:
+    secure: fklG2ho419gCGhAYP3vm2qETvSnjxm9MSQVblVcFVASZqdcBuhCSEqD9R4Dw8p/h2mlKcuwn//7tEOMbpf0+MLnmbDWkaFGCqAlsbItkDHOO0aEr4eiYdNO7Ct1sHSs6VcZveogEkYh9sLpjCTcbgZbv0eocDtwD8WNgaDiSLqibpTSlz/ZzW1KMdsrqsfWKXWLceta2r/7avFgf2rIxuZEZE9terx6DiPB9MMUVfVzBVK6cMNoHNrZqj/GpBT4exNwUKsw8GNyCunzrYCcypZIGuCZbMkPxaA4oWzNx4KHU8B35bHj8lm2UOyx+VqfdmBm4ALoOkIjJBxtcs/uKlba2DwXIzCTRVjqgowkwutej4NdERmoxfjJmgwC6TgIvswsts84i0kpt5scYv/bV/jLPd52VL8If9HMjHYS9TKWFsaBv/g6C1eizbPjPG41EaCBRJdeSNkyfLkTpMMPaetNNOWXUE6yVzJp4O5V0SQZGOxNEzwpCc8TfFbMo0LxHeAbt+Q0c64WH5nqpu28flxNKzzl1a62P8gK+mK3LGl+Q9s2GB3W/RmlxVP7Piq4LzoNRbV2ed3/gd1GVFiXtWwMs1lHRq7szauFbp0akOQtwy5kp97yWcELO65cIxafxuPC1uNBi17QXjfRximP3wLV3N2ZQBzWiTqHviv7fBL0=
