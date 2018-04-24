@@ -1,37 +1,31 @@
-# `acmatfsu.org`
-Association for Computing Machinery at Florida State University chapter homepage.
+# `fsu.acm.org`
+> Homepage of the FSU ACM chapter.
+
+https://fsu.acm.org
+
+## Getting Started
 
 
-## `src` explained
+## Built With
+  - [Vuepress](https://vuepress.vuejs.org/) – Vue-powered Static Site Generator.
+  - [Yarn](https://yarnpkg.com) – Better dependency management.
+  - [Gulp](https://gulpjs.com/) – Steaming build system.
+  - [Travis CI](https://travis-ci.org/) – Continuous Integration & Deployment.
 
-#### `locals.js`
+<!-- ## Contributing
+Contributions are welcome! Please read both the [Getting Started](#) section and the [Contributing Guidelines](#) before submitting/requesting changes. -->
 
-Constant data passed as variables to `.pug` templates. May not update on watch.
+## Versioning
+Versioning is not derived from API changes, but from significant adjustment to codebase:
 
-### Folder structure
+  - MAJOR version for significant codebase rewrites.
+  - MINOR version for localized changes, e.g. adding a new feature.
+  - PATCH version for any adjustment to `master` codebase, e.g. bugfix.
 
-Different views on the site are modularized into subfolders containing view
-specific formatting, content, styles, and code. Each type of file is flattened
-during the build stage such that all `.pug` files are built into `.html` and
-stored in the default directory. All `.sass` files are build into `.css` and
-moved to the `/css` folder, and so on.
+## Authors
+  - Andrew Sosa – _Initial work_ – [andrewsosa](https://github.com/andrewsosa)
 
-```
+See also the list of contributors who participated in this project.
 
-src
-├── locals.js       // universal variables
-├── default.sass    // default styles
-├── template.pug    // default page template
-│
-├── index
-│   ├── index.pug
-│   ├── index.sass
-│   └── index.js
-│
-├── officers        (just an example view)
-│   ├── officers.pug
-│   ├── officers.sass
-│   └── officers.js
-...
-
-```
+## License
+MIT

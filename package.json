@@ -1,47 +1,24 @@
 {
   "name": "acm-website",
-  "version": "2.0.0",
-  "description": "acmatfsu.org",
-  "main": "gulpfile.js",
+  "version": "3.0.0",
+  "description": "FSU ACM Chapter Site",
   "scripts": {
-    "build": "gulp build",
-    "dev": "gulp watch",
-    "start": "gulp deploy"
+    "dev": "vuepress dev src",
+    "build": "vuepress build -d dist src",
+    "deploy": "gulp deploy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FSU-ACM/acmatfsu.org.git"
-  },
-  "author": "",
-  "license": "ISC",
+  "repository": "https://github.com/FSU-ACM/acmatfsu.org.git",
+  "author": "Andrew Sosa <andrewsosa001@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/FSU-ACM/acmatfsu.org/issues"
   },
   "homepage": "https://github.com/FSU-ACM/acmatfsu.org#readme",
+  "private": false,
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "human-date": "^1.4.0",
-    "micro": "^9.0.2",
-    "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
-    "browserify": "^14.5.0",
-    "bulma": "^0.4.4",
+    "dotenv": "^5.0.1",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
-    "gulp-clean": "^0.3.2",
-    "gulp-data": "^1.2.1",
-    "gulp-flatten": "^0.3.1",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-variables": "^1.1.1",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "gulp-util": "^3.0.8",
+    "vinyl-ftp": "^0.6.1"
   }
 }
