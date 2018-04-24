@@ -1,10 +1,9 @@
-# `fsu.acm.org`
+# `fsu.acm.org` [![Build Status](https://travis-ci.org/FSU-ACM/homepage.svg?branch=master)](https://travis-ci.org/FSU-ACM/homepage)
 > Homepage of the FSU ACM chapter.
 
 https://fsu.acm.org
 
-## Getting Started
-
+<!-- ## Getting Started -->
 
 ## Built With
   - [Vuepress](https://vuepress.vuejs.org/) – Vue-powered Static Site Generator.
