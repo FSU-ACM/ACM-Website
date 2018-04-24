@@ -4,7 +4,8 @@
   "description": "FSU ACM Chapter Site",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build -d dist src"
+    "build": "vuepress build -d dist src",
+    "deploy": "gulp deploy"
   },
   "repository": "https://github.com/FSU-ACM/acmatfsu.org.git",
   "author": "Andrew Sosa <andrewsosa001@gmail.com>",
@@ -13,5 +14,11 @@
     "url": "https://github.com/FSU-ACM/acmatfsu.org/issues"
   },
   "homepage": "https://github.com/FSU-ACM/acmatfsu.org#readme",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "vinyl-ftp": "^0.6.1"
+  }
 }

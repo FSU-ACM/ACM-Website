@@ -1,7 +1,11 @@
 # OS Specific files
 .DS_Store
 
-/node_modules
-/html
-/build
+# Build
+/dist
+
+# Config
 /.env
+
+# Dependencies
+**/node_modules
